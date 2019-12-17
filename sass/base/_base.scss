@@ -1,0 +1,45 @@
+
+/* removes universal styling 
+adds border box universally */
+/* pseudos need to have inherit forced for border-box */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* will take from body */ 
+    box-sizing: inherit;
+}
+//WE AR DEFINING EXACTLY WHAT 1REM IS HERE!!
+//REM is the 'default font size' - and can be defined by us.
+//browser default size is 16px
+
+html {
+    font-size: 62.5%; //1rem = 10px, 10px/16px = 62.5%
+    
+    @include respond(tab-land) {
+        font-size: 56.25%;  //1rem = 9px, 9px/16px = 56.25%
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;  //1rem = 8px, 8px/16px = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12px, 12px/16px = 75% (which is bigger than the base 62.5%)
+    }
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem; 
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
