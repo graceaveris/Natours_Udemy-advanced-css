@@ -3,4 +3,4 @@
 Part of UDEMY's advanced CSS course - Built with Traditional CSS methods and Sass, multi-device responsive.
 
 Check it out here:
-https://graceaveris.github.io/
+https://graceaveris.github.io/Natours_Udemy-advanced-css/
